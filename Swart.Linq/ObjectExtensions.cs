@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Swart.DomainDrivenDesign.Linq
+namespace Swart.Linq
 {
     public static class ObjectExtensions
     {
@@ -26,7 +26,7 @@ namespace Swart.DomainDrivenDesign.Linq
         /// <returns></returns>
         public static IEnumerable<PropertyInfo> GetAllPropertiesOfType(this Type type, Type testedType)
         {
-            return type.GetProperties().Where(p => p.PropertyType.IsSubclassOf(testedType));
+            return type.GetProperties().Where(p => p.PropertyType == testedType || p.PropertyType.IsSubclassOf(testedType));
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace Swart.DomainDrivenDesign.Linq
+namespace Swart.Linq
 {
     public static class LambdaExpressionExtensions
     {
